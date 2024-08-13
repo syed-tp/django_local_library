@@ -6,6 +6,8 @@ from django.urls import reverse  # To generate URLS by reversing URL patterns
 from django.db.models import UniqueConstraint
 from django.db.models.functions import Lower
 
+
+
 class Genre(models.Model):
     """Model representing a book genre (e.g. Science Fiction, Non Fiction)."""
     name = models.CharField(
@@ -156,3 +158,9 @@ class Author(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.last_name}, {self.first_name}'
+    
+def display_genre(self):
+    """Create a string for the Genre. This is required to display genre in Admin."""
+    return ', '.join(genre.name for genre in self.genre.all()[:3])
+
+display_genre.short_description = 'Genre'
