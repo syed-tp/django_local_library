@@ -1,8 +1,12 @@
 from django.shortcuts import render
+from .models import Book, Author, BookInstance, Genre
 
+<<<<<<< HEAD
 # Create your views here.
 from .models import Book, Author, BookInstance, Genre
 
+=======
+>>>>>>> 8e3dd5a60c822f5c7fe0b3da6ba9fa2d4778dbc2
 def index(request):
     """View function for home page of site."""
 

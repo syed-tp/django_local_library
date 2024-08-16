@@ -1,5 +1,13 @@
 {% extends "base_generic.html" %}
 
+<<<<<<< HEAD
+=======
+<head><!-- Add additional CSS in static file -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+
+>>>>>>> 8e3dd5a60c822f5c7fe0b3da6ba9fa2d4778dbc2
 {% block content %}
   <h1>Local Library Home</h1>
   <p>
@@ -8,7 +16,11 @@
   </p>
   <h2>Dynamic content</h2>
   <p>The library has the following record counts:</p>
+<<<<<<< HEAD
   <ul>
+=======
+  <ul >
+>>>>>>> 8e3dd5a60c822f5c7fe0b3da6ba9fa2d4778dbc2
     <li><strong>Books:</strong> {{ num_books }}</li>
     <li><strong>Copies:</strong> {{ num_instances }}</li>
     <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
