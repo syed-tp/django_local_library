@@ -1,5 +1,8 @@
 from django.db import models
 
+from datetime import date
+
+
 # Create your models here.
 
 from django.urls import reverse  # To generate URLS by reversing URL patterns
@@ -164,3 +167,13 @@ def display_genre(self):
     return ', '.join(genre.name for genre in self.genre.all()[:3])
 
 display_genre.short_description = 'Genre'
+
+from django.conf import settings
+
+borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
+
+
+@property
+def is_overdue(self):
+    """Determines if the book is overdue based on due date and current date."""
+    return bool(self.due_back and date.today() > self.due_back)

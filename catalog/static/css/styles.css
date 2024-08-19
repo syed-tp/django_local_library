@@ -1,0 +1,80 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  #logout-form {
+    display: inline;
+  }
+  #logout-form button {
+    padding: 0;
+    margin: 0;
+  }
+  
+/* static/css/styles.css */
+.sidebar-nav {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  width: 200px; /* Fixed width for the sidebar */
+  position: relative; /* Allow absolute positioning of child elements */
+}
+
+.sidebar-nav li {
+  border-bottom: 1px solid #ddd; /* Light gray border between items */
+}
+
+.sidebar-nav li:last-child {
+  border-bottom: none; /* Remove border from the last item */
+}
+
+.sidebar-nav li a {
+  display: block;
+  color: #333; /* Dark text color */
+  text-align: center;
+  padding: 10px; /* Slim padding */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500; /* Slightly bold text */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.sidebar-nav li a:hover {
+  background-color: #008080; /* Teal blue background on hover */
+  color: white; /* White text color on hover */
+}
+
+/* User info styling */
+.user-info {
+  position: relative; /* Position it relative to the sidebar-nav */
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  color: #333; /* Dark text color */
+  font-weight: bold; /* Bold text */
+  padding: 5px; /* Optional padding */
+  
+}
+
+.user-info a {
+  color: #008080; /* Blue color for links */
+  text-decoration: none; /* Remove underline */
+}
+
+.user-info a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.user-info button {
+  background: none; /* Remove default button background */
+  border: none; /* Remove default button border */
+  color: #008080; /* Blue color */
+  cursor: pointer; /* Pointer cursor for button */
+  padding: 0; /* Remove button padding */
+  font: inherit; /* Inherit font styles from parent */
+  text-decoration: underline; /* Underline text */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.user-info button:hover {
+  color: #0573ea; /* Darker blue on hover */
+}
