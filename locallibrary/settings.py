@@ -38,7 +38,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-&psk#na5l=p3q8
 
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['syedjango.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['syed11.pythonanywhere.com', '127.0.0.1']
+
 
 # Application definition
 
