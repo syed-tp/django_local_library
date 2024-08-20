@@ -38,8 +38,10 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-&psk#na5l=p3q8
 
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['syed11.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['.railway.app', '.pythonanywhere.com', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = ['https://*.railway.app',
+                        'https://*.pythonanywhere.com']
 
 # Application definition
 
@@ -171,8 +173,6 @@ STORAGES = {
     },
 }
 
-## For example, for a site URL is at 'web-production-3640.up.railway.app'
-## (replace the string below with your own site URL):
-CSRF_TRUSTED_ORIGINS = ['https://syedjango.pythonanywhere.com']
+
 
 
