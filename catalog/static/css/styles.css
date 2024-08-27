@@ -1,79 +1,107 @@
-.sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
-  }
-  
-  #logout-form {
-    display: inline;
-  }
-  #logout-form button {
-    padding: 0;
-    margin: 0;
-  }
-  
-/* static/css/styles.css */
+/* General reset and smooth scrolling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Sidebar Navigation */
 .sidebar-nav {
   list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-  width: 200px; /* Fixed width for the sidebar */
-  position: relative; /* Allow absolute positioning of child elements */
+  padding: 20px 0; /* Add padding for better spacing */
+  margin: 0;
+  width: 220px; /* Slightly wider for a modern look */
+  background-color: #f4f4f4; /* Soft background for the sidebar */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .sidebar-nav li {
-  border-bottom: 1px solid #ffffff; /* Light gray border between items */
+  border-bottom: 1px solid #ddd; /* Softer border color */
+  transition: transform 0.2s ease; /* Smooth hover effect */
 }
 
 .sidebar-nav li:last-child {
   border-bottom: none; /* Remove border from the last item */
 }
 
+.sidebar-nav li:hover {
+  transform: translateX(10px); /* Slightly move item to the right on hover */
+}
+
 .sidebar-nav li a {
   display: block;
-  color: #333; /* Dark text color */
+  color: #444; /* Slightly lighter text color */
   text-align: left;
-  padding: 10px; /* Slim padding */
-  text-decoration: none; /* Remove underline */
-  font-weight: 500; /* Slightly bold text */
-  transition: background-color 0.1s ease; /* Smooth transition for hover effect */
+  padding: 15px; /* Increase padding for more breathing space */
+  text-decoration: none;
+  font-weight: 600; /* Bolder text */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smoother transition for hover */
 }
 
 .sidebar-nav li a:hover {
-  background-color: #008080; /* Teal blue background on hover */
-  color: white; /* White text color on hover */
-  font-weight: 800;
-  text-align: right;
+  background-color: #00796b; /* Richer teal on hover */
+  color: #ffffff; /* White text on hover */
+  font-weight: 700; /* Increase font-weight on hover */
+  text-align: center; /* Center text on hover for a unique effect */
 }
 
-/* User info styling */
+/* User Info Styling */
 .user-info {
-  position: relative; /* Position it relative to the sidebar-nav */
-  top: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
-  color: #333; /* Dark text color */
-  font-weight: bold; /* Bold text */
-  padding: 5px; /* Optional padding */
-  
+  position: relative; 
+  top: 20px; /* More space above the user info */
+  padding: 10px; /* Padding for a more defined area */
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+  color: #444; /* Match text color with sidebar */
+  font-weight: bold;
 }
 
 .user-info a {
-  color: #008080; /* Blue color for links */
-  text-decoration: none; /* Remove underline */
+  color: #00796b; /* Match link color with sidebar hover */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.user-info a:hover {
+  color: #004d40; /* Darker shade on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .user-info button {
-  background: none; /* Remove default button background */
-  border: none; /* Remove default button border */
-  color: #008080; /* Blue color */
-  cursor: pointer; /* Pointer cursor for button */
-  padding: 0; /* Remove button padding */
-  font: inherit; /* Inherit font styles from parent */
-  text-decoration: none; /* Underline text */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  background: none;
+  border: none;
+  color: #00796b; 
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
 .user-info button:hover {
-  font-size : 20px;
-  color: #0573ea; /* Darker blue on hover */
+  font-size: 18px; /* Slightly enlarge text on hover */
+  color: #004d40; /* Darker shade on hover */
+  transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+/* Logout Form */
+#logout-form {
+  display: inline;
+}
+
+#logout-form button {
+  padding: 5px 10px; /* Add some padding for better click area */
+  background-color: #00796b; /* Match button with sidebar hover */
+  color: #ffffff; /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners for modern look */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+#logout-form button:hover {
+  background-color: #004d40; /* Darker shade on hover */
 }
